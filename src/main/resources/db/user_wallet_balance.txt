@@ -1,0 +1,11 @@
+create table user_wallet_balance
+(
+    id           int                                     not null comment 'id'
+        primary key,
+    username     varchar(256)                            null comment '用户名',
+    user_account varchar(256)                            null comment '账号',
+    balance      double(10, 2) default 0.00              null comment '余额',
+    create_time  datetime      default CURRENT_TIMESTAMP not null comment '创建时间',
+    update_time  datetime      default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '修改时间'
+)
+    comment '用户表';

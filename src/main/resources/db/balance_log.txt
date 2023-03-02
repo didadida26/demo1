@@ -1,0 +1,8 @@
+create table balance_log
+(
+    id          int auto_increment
+        primary key,
+    info        varchar(255)     null,
+    balance     double default 0 null,
+    create_date date             null
+) comment '金额变动明细表';
